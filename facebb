@@ -1,0 +1,219 @@
+/**
+ * Facebook SDK for JavaScript
+ * The Facebook SDK for JavaScript provides a rich set of client-side functionality for adding Social Plugins, making API calls and implementing Facebook Login.
+ */
+
+/**
+ * @fileoverview Externs for Facebook Javascript SDK
+ * @see http://developers.facebook.com/docs/reference/javascript/
+ * @externs
+ */
+
+/** @const */
+var FB = {};
+
+/** CORE METHODS **/
+
+/**
+ * Make an API call to the Graph API.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.api/
+ * @param {string} path
+ * @param {(string|Object.<string, *>|function (Object.<*,*>))=} method
+ * @param {(Object.<string, *>|function (Object.<*,*>))=} params
+ * @param {function (Object.<*,*>)=} callback
+ */
+FB.api = function (path, method, params, callback) { };
+
+/**
+ * Initialize the library.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.init/
+ * @param {Object.<string,*>=} opt_opts
+ */
+FB.init = function (opt_opts) {};
+
+/**
+ * Method for triggering Dialogs as popups, modal dialogs or as full pages. The dialogs are automatically formatted for mobile or desktop based on the client.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.ui/
+ * @param {Object.<string, *>} params
+ * @param {function (Object.<*,*>)=} callback
+ */
+FB.ui = function (params, callback) { };
+
+/** AUTH METHODS **/
+
+/**
+ * Synchronous accessor for the current authResponse.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.getAuthResponse/
+ */
+FB.getAuthResponse = function () {};
+
+
+/**
+ * Find out the current status from the server, and get a session if the user is connected.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.getloginstatus/
+ * @param {function (Object.<*,*>)} callback
+ * @param {boolean=} force
+ */
+FB.getLoginStatus = function (callback, force) {};
+
+/**
+ * Login/Authorize/Permissions.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.login/
+ * @param {function (Object.<*,*>)} callback
+ * @param {Object.<string,*>=} opt_opts
+ */
+FB.login = function (callback, opt_opts) {};
+
+/**
+ * Logout the user in the background.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.logout/
+ * @param {function (Object.<*,*>)=} callback
+ */
+FB.logout = function (callback) {};
+
+/** @const */
+FB.Event = {};
+
+/**
+ * Subscribe to a given event name, invoking your callback function whenever the event is fired.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/
+ * @param {string} eventName
+ * @param {function (Object.<*,*>)} callback
+ */
+FB.Event.subscribe = function (eventName, callback) {};
+
+/**
+ * Removes subscribers, inverse of FB.Event.subscribe.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.Event.unsubscribe/
+ * @param {string} eventName
+ * @param {function (Object.<*,*>)} callback
+ */
+FB.Event.unsubscribe = function (eventName, callback) {};
+
+/** @const */
+FB.XFBML = {};
+
+/**
+ * Parse and render XFBML markup in the document.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.XFBML.parse/
+ * @param {Element=} node
+ * @param {function (Object.<*,*>)=} callback
+ */
+FB.XFBML.parse = function (node, callback) {};
+
+
+/** @const */
+FB.Data = {};
+
+/**
+ * This object is not constructed directly. It is returned by calls to
+ * FB.Data.Query.
+ * @constructor
+ * @private
+ */
+FB.Data.queryObject = function () {};
+
+/**
+ * @see http://developers.facebook.com/docs/reference/javascript/fb.data.query/
+ * @param {string} template
+ * @param {...(string|number|FB.Data.queryObject)} var_data
+ * @return {FB.Data.queryObject}
+ */
+FB.Data.query = function (template, var_data) {};
+
+/**
+ * @see http://developers.facebook.com/docs/reference/javascript/fb.data.waiton/
+ * @param {Array.<*>} dependencies
+ * @param {function(Object.<*,*>)} callback
+ * @return {Object.<*,*>}
+ */
+FB.Data.waitOn = function (dependencies, callback) {};
+
+/** @const */
+FB.Canvas = {};
+
+/** @const */
+FB.Canvas.Prefetcher = {};
+
+/**
+ * Controls which static resources are flushed to the browser early.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.addStaticResource/
+ */
+FB.Canvas.Prefetcher.addStaticResource = function (onOrOff, interval) {};
+
+/**
+ * Controls how statistics are collected on resources used by your application, with the intent to influence whether those resources will be fetched to the browser early, or to turn off Prefetching completely.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.Prefetcher.setCollectionMode/
+ */
+FB.Canvas.Prefetcher.setCollectionMode = function () {};
+
+
+/**
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.getPageInfo/
+ * @param {function (Object.<*,*>)} callback
+ */
+FB.Canvas.getPageInfo = function (callback) {};
+
+/**
+ * Hides a Flash Element, used in conjunction with hideFlashCallback.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/
+ * @param {Element=} elem
+ */
+FB.Canvas.hideFlashElement = function (elem) {};
+
+/**
+ * Tells Facebook to scroll to a specific location in the iframe of your canvas page.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.scrollTo/
+ * @param {number} x
+ * @param {number} y
+ */
+FB.Canvas.scrollTo = function (x, y) {};
+
+/**
+ * Starts or stops a timer which resizes your iframe every few milliseconds.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/
+ * @param {(boolean|number)=} onOrOff
+ * @param {number=} interval
+ */
+FB.Canvas.setAutoGrow = function (onOrOff, interval) {};
+
+/**
+ * Reports that the page is now usable by the user, for collecting performance metrics.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setDoneLoading/
+ * @param {function (Object.<*,*>)} callback
+ */
+FB.Canvas.setDoneLoading = function (callback) {};
+
+/**
+ * Tells Facebook to resize your iframe.
+ * @see http://developers.facebook.com/docs/reference/javascript/FB.Canvas.setSize/
+ * @param {Object.<*, number>} params
+ */
+FB.Canvas.setSize = function (params) {};
+
+/**
+ * Registers the callback for inline processing (i.e. without page reload) of user actions, such as clicks on Live Ticker game stories.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.setUrlHandler/
+ * @param {function (Object.<*,*>)} callback
+ */
+FB.Canvas.setUrlHandler = function (callback) {};
+
+/**
+ * Display a Flash Element, used in conjunction with hideFlashCallback.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.hideFlashElement/
+ * @param {Element=} elem
+ */
+FB.Canvas.showFlashElement = function (elem) {};
+
+/**
+ * When using setDoneLoading, controls the page load timer.
+ * https://developers.facebook.com/docs/reference/javascript/FB.Canvas.startTimer/
+ */
+FB.Canvas.startTimer = function () {};
+
+/**
+ * When using setDoneLoading, controls the page load timer.
+ * @see https://developers.facebook.com/docs/reference/javascript/FB.Canvas.stopTimer/
+ * @param {function (Object.<*,*>)} callback
+ */
+FB.Canvas.stopTimer = function (callback) {};
